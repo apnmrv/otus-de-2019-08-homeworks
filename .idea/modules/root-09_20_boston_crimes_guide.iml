@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="root-09_20_boston_crimes_guide [file:/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_crimes_guide/]" external.linked.project.path="$MODULE_DIR$/../../09_20_boston_crimes_guide" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide/target/scala-2.10/classes" />
+    <output-test url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide/target/scala-2.10/test-classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide">
+      <sourceFolder url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide/target/scala-2.10/src_managed/main" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide/target/scala-2.10/src_managed/test" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide/src/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../09_20_boston_crimes_guide/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.10.7:jar" level="project" />
+  </component>
+</module>

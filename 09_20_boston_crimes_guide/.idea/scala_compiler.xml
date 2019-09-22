@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="09_20_boston_crimes_guide_4465,root-09_20_boston_crimes_guide" />
+    <profile name="sbt 2" modules="09_20_boston_crimes_guide,Boston Security Guide,boston_crimes_guide">
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+    </profile>
+  </component>
+</project>
