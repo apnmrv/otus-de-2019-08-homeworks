@@ -10,28 +10,62 @@ object App {
       .master("local[*]")
       .getOrCreate()
 
-    val sc = spark.sparkContext
-
-    val resourcePath = getClass.getResource("/data_files/crimes_in_boston").getPath
+    val resourcePath = getClass
+      .getResource("/data_files/crimes_in_boston")
+      .getPath
 
     val offenceCodesFilePath = resourcePath + "/offense_codes.csv"
 
-    val crimeFilePath = resourcePath + "/crime.csv"
+    val crimesFilePath = resourcePath + "/crime.csv"
 
-    val offenceCodesDF = spark.read.format("csv")
-      .option("inferSchema", "true")
+    val codes = spark
+      .read
       .option("header","true")
-      .load(offenceCodesFilePath)
+      .option("inferSchema","true")
+      .csv(offenceCodesFilePath)
 
-    val crimeDF = spark.read.format("csv")
-      .option("inferSchema", "true")
+    val crimes = spark
+      .read
       .option("header","true")
-      .load(crimeFilePath)
+      .option("inferSchema","true")
+      .csv(crimesFilePath)
 
-    offenceCodesDF.show()
+//      crimes.show()
 
-    crimeDF.show()
+//    val result = crimes
+//         .join(
+//           broadcast(codes),
+//           crimes.col("OFFENSE_CODE") === codes.col("CODE"),
+//           "left"
+//         )
+//         .groupBy("DISTRICT")
+//         .agg(
+//              count("*").as("CRIMES_TOTAL"),
+//              avg(crimes("Lat")).as("AVG_LATITUDE"),
+//              avg(crimes("Long")).as("AVG_LONGITUDE")
+//              )
+//         .orderBy(desc("CRIMES_TOTAL"))
 
+
+//      .explain()
+//
+//    val districts =  crimes
+//      .select("DISTRICT")
+//      .distinct()
+//      .orderBy("DISTRICT")
+//
+
+    crimes.createOrReplaceTempView("crimes_view")
+
+    val result = spark
+      .sql("SELECT " +
+        "COUNT(*)                         AS CRIMES_PER_DISTRICT_TOTAL, " +
+        "IFNULL(`DISTRICT`, 'UNKNOWN')    AS DISTRICT, " +
+        "avg(`Lat`)                       AS AVG_LATITUDE, " +
+        "avg(`Long`)                      AS AVG_LONGITUDE " +
+        "FROM crimes_view GROUP BY `DISTRICT`")
+
+    result.show(20)
   }
 }
 

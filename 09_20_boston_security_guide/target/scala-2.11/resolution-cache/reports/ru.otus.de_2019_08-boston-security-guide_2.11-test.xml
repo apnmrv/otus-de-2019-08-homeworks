@@ -7,7 +7,7 @@
 		revision="0.0.1"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, scoveragePlugin"
-		date="20190922204753"/>
+		date="20190923194901"/>
 	<dependencies>
 		<module organisation="com.holdenkarau" name="spark-testing-base_2.11">
 			<revision name="2.3.0_0.9.0" status="release" pubdate="20180316104208" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/holdenk/spark-testing-base" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="8">
