@@ -30,7 +30,17 @@ object App {
       .option("inferSchema","true")
       .csv(crimesFilePath)
 
-//      crimes.show()
+    /**
+      *
+      ```sql
+
+      ```
+      *
+      *
+     */
+
+
+      codes.show(5)
 
 //    val result = crimes
 //         .join(
@@ -40,7 +50,7 @@ object App {
 //         )
 //         .groupBy("DISTRICT")
 //         .agg(
-//              count("*").as("CRIMES_TOTAL"),
+//              count("INCIDENT_NUMBER").as("CRIMES_TOTAL_BY_DISTRICT"),
 //              avg(crimes("Lat")).as("AVG_LATITUDE"),
 //              avg(crimes("Long")).as("AVG_LONGITUDE")
 //              )
@@ -55,17 +65,17 @@ object App {
 //      .orderBy("DISTRICT")
 //
 
-    crimes.createOrReplaceTempView("crimes_view")
+//    crimes.createOrReplaceTempView("crimes_view")
 
-    val result = spark
-      .sql("SELECT " +
-        "COUNT(*)                         AS CRIMES_PER_DISTRICT_TOTAL, " +
-        "IFNULL(`DISTRICT`, 'UNKNOWN')    AS DISTRICT, " +
-        "avg(`Lat`)                       AS AVG_LATITUDE, " +
-        "avg(`Long`)                      AS AVG_LONGITUDE " +
-        "FROM crimes_view GROUP BY `DISTRICT`")
-
-    result.show(20)
+//    val result = spark
+//      .sql("SELECT " +
+//        "COUNT(*)                         AS CRIMES_PER_DISTRICT_TOTAL, " +
+//        "IFNULL(`DISTRICT`, 'UNKNOWN')    AS DISTRICT, " +
+//        "avg(`Lat`)                       AS AVG_LATITUDE, " +
+//        "avg(`Long`)                      AS AVG_LONGITUDE " +
+//        "FROM crimes_view GROUP BY `DISTRICT`")
+//
+//    result.show(20)
   }
 }
 
