@@ -30,7 +30,8 @@ File > New > Project from existing sources
 
 ### Задание
 
-Напишите приложение, которое читает [json-файл](https://storage.googleapis.com/otus_sample_data/winemag-data.json.tgz) с помощью **Spark RDD API**, конвертирует его содержимое в case class’ы и распечатывает их в stdout.
+Напишите приложение, которое читает [json-файл](https://storage.googleapis.com/otus_sample_data/winemag-data.json.tgz) с помощью **Spark RDD API**, 
+конвертирует его содержимое в case class’ы и распечатывает их в stdout.
 Расположение файла передается первым и единственным аргументом.
 
 ### Сборка и запуск приложения
