@@ -4,7 +4,7 @@
 		module="root-09_13_json_reader-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20190929125351"
+		publication="20190929131404"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

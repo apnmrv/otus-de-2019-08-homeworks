@@ -12,30 +12,39 @@ object App {
 
     val sc = spark.sparkContext
 
-    val resourcePath = getClass.getResource("/data_files/github_logs/2019-09-13-6.json").getPath
+    val resourcePath = getClass.getResource(
+//      "/data_files/github_logs/2019-09-13-6.json"
+      "/data_files/winemag-data-130k-v2.json"
+    ).getPath
 
-    val ghLog = spark.read.json(resourcePath)
+    val bottles = spark.read.json(resourcePath)
 
-    val eventTypes = ghLog.groupBy("type")
-
-    val pushes = ghLog.filter("type = 'PushEvent'")
-
-    val grouped = pushes.groupBy("actor.login").count
+//    val ghLog = spark.read.json(resourcePath)
+//
+//    val eventTypes = ghLog.groupBy("type")
+//
+//    val pushes = ghLog.filter("type = 'PushEvent'")
+//
+//    val grouped = pushes.groupBy("actor.login").count
 
     println("Data schema : ")
 
-    pushes.printSchema
+    bottles.printSchema()
 
-    println("Event types : ")
+    bottles.show
 
-    eventTypes.count().sort("count").show()
+//    pushes.printSchema
 
-    println("all events: " + ghLog.count)
-
-    println("only pushes: " + pushes.count)
-
-    pushes.show(5)
-
-    grouped.show(5)
+//    println("Event types : ")
+//
+//    eventTypes.count().sort("count").show()
+//
+//    println("all events: " + ghLog.count)
+//
+//    println("only pushes: " + pushes.count)
+//
+//    pushes.show(5)
+//
+//    grouped.show(5)
   }
 }
