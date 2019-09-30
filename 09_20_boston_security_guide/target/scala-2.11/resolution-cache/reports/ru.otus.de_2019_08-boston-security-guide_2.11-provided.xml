@@ -7,7 +7,7 @@
 		revision="0.0.1"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, scoveragePlugin"
-		date="20190923194901"/>
+		date="20190930193652"/>
 	<dependencies>
 		<module organisation="org.apache.spark" name="spark-sql_2.11">
 			<revision name="2.3.0" status="release" pubdate="20180222233243" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spark.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="137">

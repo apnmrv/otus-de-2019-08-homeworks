@@ -2,8 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
-      <module name="09_20_boston_crimes_guide" target="1.8" />
-      <module name="boston_security_guide" target="1.8" />
+      <module name="Boston Security Guide" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

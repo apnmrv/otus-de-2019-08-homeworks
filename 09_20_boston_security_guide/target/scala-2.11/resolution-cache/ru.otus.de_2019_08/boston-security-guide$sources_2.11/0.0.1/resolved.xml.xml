@@ -4,7 +4,7 @@
 		module="boston-security-guide$sources_2.11"
 		revision="0.0.1"
 		status="integration"
-		publication="20190922204801"
+		publication="20190930210829"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

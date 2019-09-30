@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
 
   settings(
     inThisBuild(List(
-      organization := "ru.otus.de_2019_08",
+      organization := "com.example",
       scalaVersion := "2.11.8"
     )),
     name := "Boston Security Guide",
