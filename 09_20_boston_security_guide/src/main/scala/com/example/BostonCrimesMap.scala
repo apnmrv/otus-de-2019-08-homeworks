@@ -4,6 +4,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.functions._
 
+
 object BostonCrimesMap {
   def main(args : Array[String]): Unit = {
 
@@ -13,56 +14,158 @@ object BostonCrimesMap {
       .master("local[*]")
       .getOrCreate()
 
-    val resourcePath = getClass
-      .getResource("/data_files/crimes_in_boston")
-      .getPath
-
-    val offenceCodesFilePath = resourcePath + "/offense_codes.csv"
-
-    val crimesFilePath = resourcePath + "/crime.csv"
+    val crimesFilePath = args(0)
+    val offenceCodesFilePath = args(1)
+    val outputFilePath = args(2)
 
     val codesDF = spark
       .read
       .option("header", "true")
       .option("inferSchema", "true")
       .csv(offenceCodesFilePath)
-      .toDF()
+      .select(
+        col("CODE") as "crime_type_id",
+        regexp_replace(col("NAME"), "\\s*-.*", "") as "crime_type_name"
+      )
 
     val crimesDF = spark
       .read
       .option("header", "true")
       .option("inferSchema", "true")
       .csv(crimesFilePath)
-      .toDF()
-
-    val crimesStatsPerDistrict = crimesDF
-      .groupBy("DISTRICT")
-      .agg(
-        count("INCIDENT_NUMBER").as("crimes_total"),
-        avg("lat").as("lat"),
-        avg("long").as("lng")
+      .select(
+        (when(
+          col("DISTRICT").isNull,  "UNKNOWN")
+          ).otherwise(col("DISTRICT")
+        ) as ("district_id"),
+        col("INCIDENT_NUMBER")  as "incident_id",
+        col("OFFENSE_CODE")     as "crime_type_id",
+        col("lat")              as "latitude",
+        col("long")             as "longitude",
+        col("MONTH")            as "month_number"
       )
-      .orderBy("crimes_total")
+
+    /*
+    *
+    * Basic Stats
+    *
+    * */
+    val crimesBasicStatsDF = crimesDF
+      .groupBy("district_id")
+      .agg(
+        count("incident_id")  as "crimes_total",
+        avg("latitude")       as "lat",
+        avg("longitude")      as "lng"
+      )
+      .orderBy(desc("crimes_total"))
+      .select(
+        col("district_id"),
+        col("crimes_total"),
+        col("lat"),
+        col("lng")
+      )
+
+    /*
+    *
+    * Most frequent crime types per district
+    *
+    * */
 
     val crimeTypesCountPerDistrictDF = crimesDF
-      .join(codesDF, codesDF("CODE") === crimesDF("OFFENSE_CODE"), "inner")
-      .groupBy(crimesDF("DISTRICT"), codesDF("NAME"))
-      .agg(count("*") as ("CRIME_TYPE_COUNT_PER_DISTRICT"))
+      .join(broadcast(codesDF), ("crime_type_id"))
+      .groupBy(crimesDF("district_id"), crimesDF("crime_type_id"), codesDF("crime_type_name"))
+      .agg(count("incident_id") as "crime_type_count")
 
     val crimeTypesRankPerDistrictWindow = Window
-      .partitionBy("DISTRICT")
-      .orderBy(desc("CRIME_TYPE_COUNT_PER_DISTRICT"))
+      .partitionBy("district_id")
+      .orderBy(desc("crime_type_count"))
 
     val crimeTypesCountPerDistrictRankedDF = crimeTypesCountPerDistrictDF
       .select(
-        crimeTypesCountPerDistrictDF("DISTRICT"),
-        regexp_replace(crimeTypesCountPerDistrictDF("NAME"), "\\s*-.*","") as("CRIME_TYPE"),
-        crimeTypesCountPerDistrictDF("CRIME_TYPE_COUNT_PER_DISTRICT")
+        col("district_id"),
+        col("crime_type_id"),
+        col("crime_type_name"),
+        col("crime_type_count")
       )
-      .withColumn("CRIME_TYPE_RANK", rank().over(crimeTypesRankPerDistrictWindow))
+      .withColumn("crime_type_rank", rank().over(crimeTypesRankPerDistrictWindow))
 
-    val mostFrequentCrimeTypesPerDistrictDF = crimeTypesCountPerDistrictRankedDF
-      .where(crimeTypesCountPerDistrictRankedDF("CRIME_TYPE_RANK") < 4)
-  }
+    val threeMostFrequentCrimeTypesPerDistrictDF =
+      crimeTypesCountPerDistrictRankedDF.as("first_most_frequent_crime_type")
+      .where(col("first_most_frequent_crime_type.crime_type_rank") === 1)
+        .join(
+          crimeTypesCountPerDistrictRankedDF.as("second_most_frequent_crime_type")
+            .where(col("second_most_frequent_crime_type.crime_type_rank") === 2),
+          "district_id"
+        )
+        .join(
+        crimeTypesCountPerDistrictRankedDF.as("third_most_frequent_crime_type")
+          .where(col("third_most_frequent_crime_type.crime_type_rank") === 3),
+        "district_id"
+      )
+        .withColumn("frequent_crime_types", concat_ws(
+          ", ",
+          col("first_most_frequent_crime_type.crime_type_name"),
+          col("second_most_frequent_crime_type.crime_type_name"),
+          col("third_most_frequent_crime_type.crime_type_name")
+        ))
+          .select(
+            col("district_id"),
+            col("frequent_crime_types")
+          )
+
+    /*
+    *
+    * Crimes count per month median
+    *
+    * */
+
+    val incidentsPerMonthPerDistrictDF = crimesDF
+      .groupBy(col("district_id"), col("month_number"))
+      .agg(count("incident_id") as "incidents_count_per_month")
+
+    val incidentsPerMonthRankWindow = Window
+      .partitionBy("district_id")
+      .orderBy(desc("incidents_count_per_month"))
+
+    val crimesPerMonthPerDistrictStatsDF = incidentsPerMonthPerDistrictDF
+      .select(
+        col("district_id"),
+        col("month_number"),
+        col("incidents_count_per_month")
+      )
+      .withColumn("month_rank_per_district", rank().over(incidentsPerMonthRankWindow))
+
+    val crimesPerMonthPerDistrictMediansDF =
+      crimesPerMonthPerDistrictStatsDF.as("incidents_per_month_6th_rank")
+      .where(col("incidents_per_month_6th_rank.month_rank_per_district") === 6)
+      .join(
+        crimesPerMonthPerDistrictStatsDF.as("incidents_per_month_7th_rank")
+          .where(col("incidents_per_month_7th_rank.month_rank_per_district") === 7),
+        ("district_id")
+      )
+      .select(
+        col("district_id"),
+        (col("incidents_per_month_6th_rank.incidents_count_per_month")
+          + col("incidents_per_month_7th_rank.incidents_count_per_month"))/2 as "crimes_monthly"
+      ).distinct()
+
+    /*
+    *
+    * Result
+    *
+    */
+
+    val bostonCrimesMapDF = crimesBasicStatsDF
+      .join(
+        crimesPerMonthPerDistrictMediansDF,
+        "district_id"
+      )
+      .join(
+        threeMostFrequentCrimeTypesPerDistrictDF,
+        "district_id"
+      ).orderBy(desc("crimes_total"))
+
+      bostonCrimesMapDF.write.parquet(outputFilePath + "/parquet/")
+   }
 }
 
