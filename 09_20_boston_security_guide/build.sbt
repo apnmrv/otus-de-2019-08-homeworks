@@ -5,7 +5,7 @@ lazy val root = (project in file(".")).
       organization := "com.example",
       scalaVersion := "2.11.8"
     )),
-    name := "boston_crimes_Map",
+    name := "boston_crimes_map",
     version := "0.0.1",
 
     sparkVersion := "2.3.0",
