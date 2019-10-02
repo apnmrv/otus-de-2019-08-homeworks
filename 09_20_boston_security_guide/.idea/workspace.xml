@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95fcfd0c-8478-4847-83a6-90c58ed63f91" name="Default Changelist" comment="" />
+    <list default="true" id="95fcfd0c-8478-4847-83a6-90c58ed63f91" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -17,7 +19,26 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -35,7 +56,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/example/Crime.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/example/CrimeType.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/example/BostonCrimesMap.scala" />
+        <option value="$PROJECT_DIR$/../project_template/my_project/build.sbt" />
         <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -47,40 +70,28 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Boston Security Guide" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Boston Security Guide" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Boston Security Guide" type="b2602c69:ProjectViewProjectNode" />
               <item name="09_20_boston_security_guide" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Boston Security Guide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="09_20_boston_security_guide" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Boston Security Guide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="09_20_boston_security_guide" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Boston Security Guide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="09_20_boston_security_guide" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="scala-2.11" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Boston Security Guide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="09_20_boston_security_guide" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="streams" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -89,7 +100,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569974521769" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569974967253" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -204,11 +215,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2016" y="24" width="1671" height="1054" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
       <window_info id="DB Browser" order="2" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.21204671" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.21204671" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="5" />
       <window_info id="Image Layers" order="6" />
@@ -226,7 +238,7 @@
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32952183" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.32744282" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="10" weight="0.7172557" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.55717254" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.55717254" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32952183" />
       <window_info anchor="bottom" id="SBT Execute" order="14" side_tool="true" />
@@ -294,8 +306,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        <state relative-caret-position="105">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
