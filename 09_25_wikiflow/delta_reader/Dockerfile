@@ -46,6 +46,6 @@ COPY ./target /usr/bin/app
 WORKDIR /usr/bin/app
 
 ENTRYPOINT /usr/local/spark/bin/spark-submit \
-		--class "com.renarde.wikiflow.consumer.DeltaConsumer" \
+		--class "com.renarde.wikiflow.delta_reader.DeltaConsumer" \
 		--master "local[2]" \
-		consumer-1.0-SNAPSHOT-jar-with-dependencies.jar
+		delta_reader-1.0-SNAPSHOT-jar-with-dependencies.jar

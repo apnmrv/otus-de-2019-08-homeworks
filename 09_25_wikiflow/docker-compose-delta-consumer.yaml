@@ -2,8 +2,8 @@ version: "3"
 services:
   delta-consumer:
     build:
-      context: ./consumer
-      dockerfile: Dockerfile-delta
+      context: ./delta_reader
+      dockerfile: Dockerfile
     networks:
       - wikiflow-network
     ports:

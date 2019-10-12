@@ -3,7 +3,6 @@ package com.renarde.wikiflow.consumer
 import com.typesafe.scalalogging.LazyLogging
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.streaming.Trigger
 import org.apache.spark.sql.types.{IntegerType, TimestampType}
 
 object AnalyticsConsumer extends App with LazyLogging {
@@ -65,7 +64,6 @@ object AnalyticsConsumer extends App with LazyLogging {
     .option("overwriteSchema", "true")
     .option("checkpointLocation", "/storage/analytics.checkpoint/")
     .option("path", "/storage/analytics")
-    .trigger(Trigger.ProcessingTime("3 seconds"))
     .start()
 
   spark.streams.awaitAnyTermination()

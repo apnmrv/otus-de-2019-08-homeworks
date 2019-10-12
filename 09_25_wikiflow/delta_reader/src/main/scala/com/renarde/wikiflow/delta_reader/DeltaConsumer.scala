@@ -1,8 +1,7 @@
-package com.renarde.wikiflow.consumer
+package com.renarde.wikiflow.delta_reader
 
 import com.typesafe.scalalogging.LazyLogging
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.streaming.Trigger
 
 object DeltaConsumer extends App with LazyLogging {
 
@@ -19,6 +18,8 @@ object DeltaConsumer extends App with LazyLogging {
     .load("/storage/analytics")
     .writeStream
     .format("console")
+    .option("mergeSchema", "true")
+    .option("truncate", "false")
     .start()
 
   spark.streams.awaitAnyTermination()

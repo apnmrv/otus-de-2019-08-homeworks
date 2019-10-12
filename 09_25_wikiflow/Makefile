@@ -21,6 +21,6 @@ run-analytics-consumer:
 	docker-compose -f docker-compose-analytics-consumer.yaml up
 
 run-delta-consumer:
-	mvn clean package -pl consumer
+	mvn clean package -pl delta_reader
 	docker-compose -f docker-compose-delta-consumer.yaml build
 	docker-compose -f docker-compose-delta-consumer.yaml up
