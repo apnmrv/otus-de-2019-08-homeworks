@@ -1,0 +1,18 @@
+version: "3"
+services:
+  delta-consumer:
+    build:
+      context: ./consumer
+      dockerfile: Dockerfile-delta
+    networks:
+      - wikiflow-network
+    ports:
+      - "4041:4040"
+    volumes:
+      - delta:/storage
+networks:
+  wikiflow-network:
+    external:
+      name: wikiflow-network
+volumes:
+  delta:
