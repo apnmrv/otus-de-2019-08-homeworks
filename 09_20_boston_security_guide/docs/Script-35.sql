@@ -9,7 +9,7 @@ SELECT
 FROM crimes AS crimes
 GROUP BY crimes.DISTRICT
 
-========================================================================================
+-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 SELECT DISTINCT 
@@ -37,7 +37,7 @@ FROM
 WHERE FREQ_CRIME_TYPE_CODE_2 IS NOT NULL AND FREQ_CRIME_TYPE_CODE_3 IS NOT NULL 
 
 
-===========================================================================================
+-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 SELECT
@@ -47,7 +47,7 @@ SELECT
 	COUNT(INCIDENT_NUMBER) OVER (PARTITION BY DISTRICT, OFFENSE_CODE)		AS CRIMES_OF_TYPE_COUNT
 FROM crimes
 
-==============================================================================================
+-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 -- CRIMES_COUNT_PER_DISTRICT
 SELECT
@@ -64,7 +64,7 @@ SELECT
 FROM crimes
 GROUP BY DISTRICT, OFFENSE_CODE
 
---  
+-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 SELECT
 	CRIMES_COUNT_PER_DISTRICT.DISTRICT										AS DISTRICT,
 	CRIMES_COUNT_PER_DISTRICT.CRIMES_TOTAL_PER_DISTRICT						AS CRIMES_TOTAL_PER_DISTRICT,
@@ -80,7 +80,7 @@ LEFT JOIN (
 ) AS CRIMES_COUNT_PER_DISTRICT ON CRIMES_COUNT_PER_DISTRICT.DISTRICT LIKE CRIMES_COUNT_PER_DISTRICT_AND_CRIME_TYPE.DISTRICT 
 GROUP BY DISTRICT, CRIMES_TOTAL_PER_DISTRICT, CRIME_TYPE_CODE
 
--- 
+-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 SELECT DISTINCT
 	STAT_TOTAL.DISTRICT 															AS district,
@@ -143,23 +143,8 @@ LEFT JOIN (
                                                     AND CRIMES_COUNT_PER_MONTH_MEDIAN_PER_DISTRICT.MEDIAN IS NOT NULL
 WHERE FREQ_CRIME_TYPE_2 IS NOT NULL AND FREQ_CRIME_TYPE_3 IS NOT NULL
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-SELECT REGEXP_REPLACE('aasdkah - asdasd','\s*-.*','')
-
-
-SELECT 
+-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+SELECT
 	DISTRICT 																																																			AS DISTRICT,
 	(NTH_VALUE(CRIMES_COUNT_PER_MONTH, 6) OVER (PARTITION BY DISTRICT ORDER BY CRIMES_COUNT_PER_MONTH DESC) + NTH_VALUE(CRIMES_COUNT_PER_MONTH, 7) OVER (PARTITION BY DISTRICT ORDER BY CRIMES_COUNT_PER_MONTH DESC))/2 AS MEDIAN
 FROM
@@ -184,7 +169,7 @@ FROM spark_sandbox_db.crimes
 GROUP BY DISTRICT, MONTHS_NAME
 ORDER BY DISTRICT, CRIMES_PER_MONTH DESC) AS CRIMES_PER_MONTH_PER_DISTRICT
 
-
+-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 SELECT 
 	IF(crimes.DISTRICT LIKE '', 'UNKNOWN', crimes.DISTRICT)				AS DISTRICT, 
