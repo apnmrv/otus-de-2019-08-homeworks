@@ -1,0 +1,195 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/target/scala-2.11/classes
+compile options:
+4 items
+0 -> -deprecation
+1 -> -unchecked
+2 -> -deprecation
+3 -> -unchecked
+javac options:
+4 items
+0 -> -source
+1 -> 1.8
+2 -> -target
+3 -> 1.8
+compiler version:
+1 items
+0 -> 2.11.8
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+3 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> /Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/target/scala-2.11/classes/com/example/BostonCrimesMap$$anonfun$main$1.class
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> /Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/target/scala-2.11/classes/com/example/BostonCrimesMap$.class
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> /Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/target/scala-2.11/classes/com/example/BostonCrimesMap.class
+binary dependencies:
+4 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> /Users/pandy/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/jars/spark-catalyst_2.11-2.3.0.jar
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> /Users/pandy/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.3.0.jar
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> /Users/pandy/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+3 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> com.example.BostonCrimesMap
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> com.example.BostonCrimesMap$
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> com.example.BostonCrimesMap$$anonfun$main$1
+used names:
+92 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> $
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> <init>
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> <repeated>
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> ===
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Any
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> AnyRef
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Array
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> ArrayOps
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Boolean
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> BostonCrimesMap
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Builder
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Column
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> ColumnName
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> DataFrame
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> DataFrameReader
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Dataset
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Function1
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Int
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Long
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Nothing
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Object
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Predef
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> RelationalGroupedDataset
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Row
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> SparkSession
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> String
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> StringContext
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> StringToColumn
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> T
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> TypedColumn
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> U
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Unit
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> Window
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> WindowSpec
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> _$2
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> agg
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> apache
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> appName
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> apply
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> args
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> as
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> avg
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> broadcast
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> builder
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> codesDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> col
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> com
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> concat_ws
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> count
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> crimeTypesCountPerDistrictDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> crimeTypesCountPerDistrictRankedDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> crimeTypesRankPerDistrictWindow
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> crimesBasicStatsDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> crimesDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> crimesFilePath
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> crimesPerMonthPerDistrictMediansDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> csv
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> desc
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> example
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> expr
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> expressions
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> foreach
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> functions
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> getOrCreate
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> groupBy
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> implicits
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> incidentsPerMonthPerDistrictDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> isNull
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> join
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> master
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> offenceCodesFilePath
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> option
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> orderBy
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> org
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> otherwise
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> over
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> package
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> partitionBy
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> println
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> rank
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> read
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> refArrayOps
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> regexp_replace
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> scala
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> select
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> show
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> spark
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> sql
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> threeMostFrequentCrimeTypesPerDistrictDF
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> when
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> where
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> withColumn
+product stamps:
+3 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/target/scala-2.11/classes/com/example/BostonCrimesMap$$anonfun$main$1.class -> lastModified(1570971100000)
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/target/scala-2.11/classes/com/example/BostonCrimesMap$.class -> lastModified(1570971100000)
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/target/scala-2.11/classes/com/example/BostonCrimesMap.class -> lastModified(1570971100000)
+source stamps:
+1 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> hash(6657641057e098a5ca8586fa8889f6f9fdc358a1)
+binary stamps:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1562241555000)
+/Users/pandy/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/jars/spark-catalyst_2.11-2.3.0.jar -> lastModified(1519331507000)
+/Users/pandy/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.3.0.jar -> lastModified(1519331558000)
+/Users/pandy/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> lastModified(1457105192000)
+class names:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/pandy/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/jars/spark-catalyst_2.11-2.3.0.jar -> org.apache.spark.sql.Row
+/Users/pandy/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.3.0.jar -> org.apache.spark.sql.functions$
+/Users/pandy/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar -> scala.collection.mutable.ArrayOps
+internal apis:
+1 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwxU+pggAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hw9LVJQHQABm5vdGlmeXNxAH4ADI1vFo90AAR3YWl0c3EAfgAMZ0GmE3QADSRhc0luc3RhbmNlT2ZzcQB+AAxsb7xldAAGZXF1YWxzc3EAfgAMQ0TfX3QADGFzSW5zdGFuY2VPZnNxAH4ADMsj4ZZ0AAxzeW5jaHJvbml6ZWRzcQB+AAza7YaqdAANJGlzSW5zdGFuY2VPZnNxAH4ADEokTlF0AARtYWluc3EAfgAMhdlacXQACW5vdGlmeUFsbHNxAH4ADFZsmGR0AAxpc0luc3RhbmNlT2ZzcQB+AAyN3Y+AdAAPQm9zdG9uQ3JpbWVzTWFwc3EAfgAMx9lwCnQAAj09c3EAfgAMHZeo3nQABWNsb25lc3EAfgAMQOsUxHQACHRvU3RyaW5nc3EAfgAMmQLDeXQAAiE9c3EAfgAMW2aL9nQACGdldENsYXNzc3EAfgAMEZd9knQAAm5lc3EAfgAMZuMKdnQAAmVxc3EAfgAMERDkg3QAAiMjc3EAfgAMD4b7m3QACGZpbmFsaXplc3EAfgAMlJC0K3QACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHQAG2NvbS5leGFtcGxlLkJvc3RvbkNyaW1lc01hcHVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AWXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBBTAAJaW5oZXJpdGVkcQB+AEFMAAdwYXJlbnRzcQB+AEF4cQB+AF5zcQB+AFl1cQB+ADwAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AEJxAH4AS3VxAH4ATAAAAABzcQB+AE4AcQB+AB11cQB+AFEAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AXXQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AF1zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AHl1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADUwAA3RwZXEAfgBmeHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBUdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgBtWwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBdc3EAfgBsdAAFQXJyYXlxAH4AcnVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgBsdAAGU3RyaW5nc3EAfgBwc3EAfgBzdXEAfgB2AAAAA3NxAH4AeHQABGphdmFzcQB+AHh0AARsYW5ncQB+AH1zcQB+AFl1cQB+ADwAAAAAc3EAfgBZdXEAfgCRAAAAAnNxAH4AbHQABk9iamVjdHEAfgCVc3EAfgBsdAADQW55cQB+AHJ1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAnNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AAtjb20uZXhhbXBsZXNxAH4ApnQAA2NvbXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUsnn11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdABkL1VzZXJzL3BhbmR5L2NvdXJzZXMvb3R1cy9kZS0yMDE5LTA4LWhvbWV3b3Jrcy8wOV8yMF9ib3N0b25fc2VjdXJpdHlfZ3VpZGUvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFGZXZBBX4JilyoWG+oiJ9vn9w1ih
+external apis:
+0 items
+source infos:
+1 items
+/Users/pandy/courses/otus/de-2019-08-homeworks/09_20_boston_security_guide/src/main/scala/com/example/BostonCrimesApp.scala -> 
+AAAAAAAAAAA=
+compilations:
+9 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUCPkt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUHBLx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUd1BR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+3 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUeyI11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+4 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUgAwZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+5 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUmvi11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+6 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUnWd91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+7 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUqNAJ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+8 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABbcUsnn11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAZC9Vc2Vycy9wYW5keS9jb3Vyc2VzL290dXMvZGUtMjAxOS0wOC1ob21ld29ya3MvMDlfMjBfYm9zdG9uX3NlY3VyaXR5X2d1aWRlL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
