@@ -144,7 +144,7 @@ object BostonCrimesMap {
       .join(
         threeMostFrequentCrimeTypesPerDistrictDF,
         "district_id"
-      ).orderBy(desc("crimes_total")).show(false)
+      ).orderBy(desc("crimes_total"))
 
       bostonCrimesMapDF.write.parquet(outputFilePath + "/parquet/")
    }
