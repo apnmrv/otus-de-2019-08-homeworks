@@ -7,7 +7,7 @@ import org.apache.spark.sql.functions._
 object BostonCrimesMap {
   def main(args : Array[String]): Unit = {
 
-    args.foreach(println)
+    // args.foreach(println)
 
     val spark = SparkSession
       .builder()
