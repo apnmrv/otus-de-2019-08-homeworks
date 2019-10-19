@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c96abfdc-4965-43a2-ac0e-a5dc3433f8f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/create_python_model-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/python_model_spark_inference-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/create_python_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/create_python_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/create_spark_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/create_spark_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/python_model_spark_inference.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/python_model_spark_inference.ipynb" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1S9SvF5D4eQiLXvTZ9HmrAMtOxf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Makefile.run-jupyter (1)">
+    <configuration name="run-jupyter (1)" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="run-jupyter" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="run-jupyter" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="run-jupyter" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.jupyter-local: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="jupyter-local" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile.run-jupyter (1)" />
+        <item itemvalue="Docker.docker-compose.yaml.jupyter-local: Compose Deployment" />
+        <item itemvalue="Makefile.run-jupyter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../09_13_json_reader" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../09_20_boston_crimes_guide" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../09_20_boston_security_guide" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../de-2019-08/homeworks/09_13_json_reader" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../de-2019-08/projects/spark/20190913/develop/sbt/09-13_json_reader" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../de-2019-08/projects/spark/20190918/spark_project_003/sparkproject" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../de-2019-08/projects/spark/20190918/spark_project_004/sparkproject" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../de-2019-08/projects/spark/20190918/spark_project_005/sparkproject" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5915a9f5" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c96abfdc-4965-43a2-ac0e-a5dc3433f8f9" name="Default Changelist" comment="" />
+      <created>1570974546548</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570974546548</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
