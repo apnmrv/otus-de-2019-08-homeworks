@@ -46,10 +46,32 @@ SEGMENTED BY HASH(DT, CUR_ID) ALL NODES
 
 #### Читаем данные из csv файла и загружаем в STAGE
 ```
-\set inputfile `echo $HOME`/ccrData_`date`.csv => \echo :inputfile
 CREATE FLEX TABLE csv_basic();
-COPY csv_basic FROM :inputfile PARSER fcsvparser();
-SELECT COPY_TABLE('csv_basic', 'CMA.STG_OPER');
+COPY csv_basic FROM '/mnt/share/consolidated_coin_data.csv' PARSER fcsvparser();
+
+INSERT INTO CMA.STG_OPER (
+	BUSINESS_DT,
+	CUR_ID,
+	DT,
+	PRICE_OPEN,
+	PRICE_MAX,
+	PRICE_MIN,
+	PRICE_CLOSE,
+	MARKET_VOL_USD,
+	MARKET_CAP_USD
+)
+SELECT
+	CURRENT_DATE,
+	"Currency::VARCHAR",
+	"Date"::DATE,
+	"Open"::NUMERIC,
+	"High"::NUMERIC,
+	"Low"::NUMERIC,
+	"Close"::NUMERIC,
+	REGEXP_REPLACE("Volume",'[^0-9]','')::!NUMERIC,
+	REGEXP_REPLACE("Market Cap",'[^0-9]','')::!NUMERIC
+FROM
+	csv_basic
 ```
 
 #### Загружаем метаданные
@@ -65,9 +87,9 @@ SELECT	DISTINCT
 	, 'STG_OPER' AS FILE_NAME
 	, stg.BUSINESS_DT
 	, GETDATE() as LOAD_TS
-FROM CUR.STG_OPER stg
+FROM CMA.STG_OPER stg
 -- filter out what has already been loaded
-	LEFT JOIN CUR.ETL_FILE_LOAD fl
+	LEFT JOIN CMA.ETL_FILE_LOAD fl
 		ON fl.SOURCE = 'FILE_CSV'
 			AND fl.FILE_NAME = 'STG_OPER'
 			AND fl.BUSINESS_DT = stg.BUSINESS_DT
@@ -84,7 +106,7 @@ CREATE TABLE IF NOT EXISTS CMA.ODS_OPER (
 	, LOAD_TS TIMESTAMP NOT NULL
 	, BUSINESS_DT DATE NOT NULL
 	, DT DATE NOT NULL
-	, CUR_ID VARCHAR(64) NOT NULL
+	, CUR_ID LONG VARCHAR(64) NOT NULL
 	, PRICE_OPEN NUMERIC(18,6)
 	, PRICE_MAX NUMERIC(18,6)
 	, PRICE_MIN NUMERIC(18,6)
@@ -183,7 +205,7 @@ CREATE TABLE IF NOT EXISTS CMA.DDS_HUB_CUR (
 	HK_CUR_ID VARCHAR(32) NOT NULL
     , FILE_ID INTEGER NOT NULL
     , LOAD_TS TIMESTAMP NOT NULL
-    , CUR_ID VARCHAR(64) NOT NULL
+    , CUR_ID LONG VARCHAR(64) NOT NULL
     , PRIMARY KEY (HK_CUR_ID) ENABLED
 )
 ORDER BY CUR_ID
@@ -199,17 +221,17 @@ CREATE TABLE IF NOT EXISTS CMA.DDS_ST_CUR_METRICS (
     , LOAD_TS TIMESTAMP NOT NULL
     , HASHDIFF VARCHAR(32) NOT NULL
     , DT DATE NOT NULL
-    , PRICE_OPEN
-    , PRICE_MIN
-    , PRICE_MAX
-    , PRICE_CLOSE
-    , MARKET_VOL_USD
-    , MARKET_CAP_USD
-	PRIMARY KEY (HK_CUR_ID, HASHDIFF) ENABLED
+	, PRICE_OPEN NUMERIC(18,6)
+	, PRICE_MAX NUMERIC(18,6)
+	, PRICE_MIN NUMERIC(18,6)
+	, PRICE_CLOSE NUMERIC(18,6)
+	, MARKET_VOL_USD NUMERIC(18,6)
+	, MARKET_CAP_USD NUMERIC(18,6)
+	, PRIMARY KEY (HK_CUR_ID, HASHDIFF) ENABLED
 )
 ORDER BY
-	HK_CUR_ID ,
-	LOAD_TS
+	HK_CUR_ID
+	,	LOAD_TS
 SEGMENTED BY HASH(HK_CUR_ID) ALL NODES
 PARTITION BY DT GROUP BY CALENDAR_HIERARCHY_DAY(DT, 1, 2)
 ;
@@ -260,7 +282,7 @@ SELECT
     , src.FILE_ID
     , src.LOAD_TS
     , src.CUR_ID
-FROM CMA.V_STG_OPER_DDS_CUR src
+FROM CMA.V_STG_OPER_DDS_HUB_CUR src
 ;
 ```
 
@@ -272,7 +294,15 @@ SELECT
 	MD5(src.CUR_ID) AS HK_CUR_ID
     , fl.FILE_ID
     , fl.LOAD_TS
-    , MD5(isnull(src.DT::VARCHAR,'NULL')||isnull(src.PLAN::VARCHAR,'NULL')||isnull(src.FACT::VARCHAR,'NULL')) AS HASHDIFF
+    , MD5(
+    	isnull(src.DT::VARCHAR,'NULL')
+    	||isnull(src.PRICE_OPEN::VARCHAR,'NULL')
+    	||isnull(src.PRICE_MIN::VARCHAR,'NULL')
+    	||isnull(src.PRICE_MAX::VARCHAR,'NULL')
+    	||isnull(src.PRICE_CLOSE::VARCHAR,'NULL')
+    	||isnull(src.MARKET_VOL_USD::VARCHAR,'NULL')
+    	||isnull(src.MARKET_CAP_USD::VARCHAR,'NULL')
+    	) AS HASHDIFF
     , src.DT
     , src.PRICE_OPEN
     , src.PRICE_MIN
@@ -296,7 +326,15 @@ FROM CMA.STG_OPER src
 				AND fl.BUSINESS_DT = src.BUSINESS_DT
 	LEFT JOIN CMA.DDS_ST_CUR_METRICS trg
 		ON MD5(src.CUR_ID) = trg.HK_CUR_ID
-			AND MD5(isnull(src.DT::VARCHAR,'NULL')||isnull(src.PLAN::VARCHAR,'NULL')||isnull(src.FACT::VARCHAR,'NULL')) = trg.HASHDIFF
+			AND MD5(
+			    	isnull(src.DT::VARCHAR,'NULL')
+			    	||isnull(src.PRICE_OPEN::VARCHAR,'NULL')
+			    	||isnull(src.PRICE_MIN::VARCHAR,'NULL')
+			    	||isnull(src.PRICE_MAX::VARCHAR,'NULL')
+			    	||isnull(src.PRICE_CLOSE::VARCHAR,'NULL')
+			    	||isnull(src.MARKET_VOL_USD::VARCHAR,'NULL')
+			    	||isnull(src.MARKET_CAP_USD::VARCHAR,'NULL')
+				) = trg.HASHDIFF
 WHERE trg.HK_CUR_ID IS NULL
 ;
 ```
@@ -321,7 +359,7 @@ SELECT
     , src.FILE_ID
     , src.LOAD_TS
     , src.HASHDIFF
-    , src.DT DATE NOT NULL
+    , src.DT
     , src.PRICE_OPEN
     , src.PRICE_MIN
     , src.PRICE_MAX
