@@ -1,9 +1,9 @@
-## Скрипты DDL и ETL для хранилища ежедневных метрик криптовалют
+## Скрипты DDL и ETL для хранилища метрик криптовалют
 
-За основу взят датасет: https://www.kaggle.com/philmohun/cryptocurrency-financial-data
-Файл с сырыми данными ./raw-data/consolidated_coin_data.csv 
+Загрузка данных из CSV файлов. 
+Формат файла соответствует датасету https://www.kaggle.com/philmohun/cryptocurrency-financial-data (см ./raw-data/consolidated_coin_data.csv)
 
-## STAGE 
+## STAGE
 
 ### DDL
 
